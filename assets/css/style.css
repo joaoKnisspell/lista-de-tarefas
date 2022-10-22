@@ -1,0 +1,233 @@
+@import url(reset.css);
+
+:root{
+    --fonte: 'Urbanist', sans-serif;
+    --laranja: #FF575C;
+    --preto: #212121;
+    --verde: linear-gradient(286.17deg, #1AB65C 0%, #39E180 100%);
+    --preto-fundo: #181A20;
+}
+
+body{
+    font-family: var(--fonte);
+}
+
+.tarefas__container{
+    padding:0em 1.5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+}
+
+.tarefas__titulo{
+    font-size: 40px;
+    font-weight: 700;
+    text-align: center;
+    margin: 0.8em 0;
+}
+
+.lista__container, .add__tarefa-container{
+    border-radius: 5px;
+}
+
+.lista__container{
+    margin-bottom: auto;
+    min-height:0;
+    border:3px solid #EEEEEE;
+    padding: 1em 1em 0em 1em;
+}
+
+.add__tarefa-container{
+    border: 3px solid #EEEEEE;
+    display: flex;
+    flex-direction: column;
+    margin: 1em 0;
+    padding: 1em;
+}
+
+label{
+    font-size: 20px;
+}
+
+.input-tarefa{
+    margin:1em 0;
+    padding: 0.5em 1em;
+    font-family: var(--fonte);
+    border:1px solid #EEEEEE;
+    border-radius: 20px;
+    font-size: 18px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.input-tarefa::placeholder{
+    position: absolute;
+    font-size: 18px;
+}
+
+.input-tarefa, .botao{
+    outline: unset;
+}
+
+.tarefa__botoes{
+    display: flex;
+    gap:1em;
+}
+
+.botao{
+    padding: 0.8em;
+    background-color: var(--laranja);
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    border-radius: 100px;
+    border: none;
+    font-size: 16px;
+    color: #ffffff;
+    font-weight: 500;
+    width: 100%;
+}
+
+.tarefa{
+    border:3px solid #EEEEEE;
+    padding: 0.5em 1.2em;
+    border-radius: 100px;
+    margin-bottom: 1em;
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    font-size: 18px;
+    
+}
+
+
+.done{
+    background-image: url(/assets/img/Ellipse\ 21.svg);
+    margin:0 0 0 auto;
+    
+}
+
+.done, .remove{
+    width: 25px;
+    height: 25px;
+    background-repeat:no-repeat;
+    background-size: cover;
+    border: none;
+    background-color: transparent;
+}
+
+.remove{
+    background-image: url(/assets/img/Ellipse\ 21\ \(1\).svg);   
+}
+
+.removeAll{
+    background-color: gray;
+}
+
+.tarefa-feita{
+    text-decoration: line-through;
+    background-color: var(--laranja);
+    color: #ffffff;
+    transition: .5s;
+}
+
+.feita, .feita-remove{
+    width: 25px;
+    height: 25px;
+    transition: .5s;
+}
+
+.feita{
+    background-image:url(/assets/img/done-done.svg)
+}
+
+.feita-remove{
+        background-image:url(/assets/img/remove-done.svg)
+}
+
+footer{
+    font-size: 16px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #FF575C;
+    margin-top: 1em;
+    color: #ffffff;
+    font-weight: 500;
+}
+
+@media screen and (min-width:1024px){
+    .tarefas__container{
+        margin: 0 10%;
+    }
+
+    .tarefa{
+        width: 70%;
+        margin: 0 auto 1em auto;
+        font-size: 20px;
+    }
+
+    .done, .remove, .feita, .feita-remove{
+        width: 30px;
+        height: 30px;
+    }
+
+    .lista__container{
+        padding: 1.5em 0 ;
+    }
+
+}
+
+@media screen and (min-width:1440px){
+    .tarefas__container{
+        margin: 0 15%;
+    }
+
+    .tarefa{
+        width: 40%;
+    }
+
+  .lista__tarefas{
+    display: flex;
+    flex-wrap:wrap;
+  }
+}
+
+@media screen and (min-width: 1700px){
+
+    .tarefas__titulo{
+        font-size: 50px;
+    }
+
+    .tarefas__container{
+        margin: 0 20%;
+    }
+
+    .tarefa{
+        font-size: 20px;
+    }
+
+    .done, .remove, .feita, .feita-remove{
+        width: 40px;
+        height: 40px;
+    }
+
+    .add__tarefa-container{
+        width: 40%;
+    
+        /* margin: 1em 10%; */
+        /* padding: 2em 5em;  */
+    }
+
+    .botao, .input-tarefa::placeholder, .input-tarefa, label{
+        font-size: 20px;
+    }
+
+    .tarefa__botoes{
+        display: flex;
+        flex-direction: column;
+        gap:1em;
+    }
+    
+    
+}

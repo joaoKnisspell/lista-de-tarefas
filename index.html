@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tarefas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+
+    <main class="tarefas__container">
+        <h1 class="tarefas__titulo">Lista de Tarefas</h1>
+        <div class="lista__container">
+            <audio src="./assets/audio/completed.mp3"></audio>
+            <ul class="lista__tarefas">
+
+            </ul>
+        </div>
+        <div class="add__tarefa-container">
+            <form action="" id="adiciona-tarefa">
+            <label for="tarefa">Tarefa:</label>
+            <input type="text" name="tarefa" class="input-tarefa" placeholder="Adicione sua Tarefa">
+            <div class="tarefa__botoes">
+                <button class="botao addTarefa">Adicionar</button>
+                <button class="botao removeAll">Apagar tudo</button>
+            </div>
+        </form>
+        </div>
+    </main>
+
+    <footer>&#169 Projeto desenvolvido por João Zimmermann</footer>
+
+
+    <script src="./assets/js/main.js"></script>
+</body>
+</html>
