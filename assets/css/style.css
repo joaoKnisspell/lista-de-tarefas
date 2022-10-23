@@ -127,13 +127,13 @@ label{
     text-decoration: line-through;
     background-color: var(--laranja);
     color: #ffffff;
-    transition: .5s;
+    /* transition: .5s; */
 }
 
 .feita, .feita-remove{
     width: 25px;
     height: 25px;
-    transition: .5s;
+    /* transition: .5s; */
 }
 
 .feita{
